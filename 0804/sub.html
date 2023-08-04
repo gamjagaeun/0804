@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link href="css/common1.css" rel="stylesheet">
+    <link href="css/sub.css" rel="stylesheet">
+    <style>
+        #sub {
+            width: 1168px;
+            margin: 770px;
+            margin: 60px auto 80px;
+            display: flex;
+        }
+
+
+
+        .goods_left {
+            width: 536px;
+            height: 770px;
+        }
+
+        .goods_img {
+            width: 536px;
+            height: 536px;
+        }
+
+        .goods_img>a>img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+
+        .goods_img_bottom {
+            width: 536px;
+            height: 123px;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+            margin-top: 20px;
+            padding: 12px;
+            box-sizing: border-box;
+            justify-content: center;
+        }
+
+        .goods_box {
+            width: 208px;
+            height: 98px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+
+        .img_inner1 {
+            width: 96px;
+            height: 96px;
+            border-radius: 8px;
+            border: 1px solid #000;
+        }
+
+        .img_inner1>img {
+            width: 100%;
+            height: 96px;
+            border-radius: 8px;
+
+        }
+
+        .img_inner2 {
+            width: 96px;
+            height: 96px;
+            border-radius: 8px;
+        }
+
+        .img_inner2>img {
+            width: 100%;
+            height: 96px;
+            border-radius: 8px;
+        }
+
+        .goods_info {
+            width: 536px;
+            height: 68px;
+            border-top: 1px solid #f5f5f5;
+            border-bottom: 1px solid #f5f5f5;
+            display: flex;
+            align-items: center;
+            margin: 20px 0 0px;
+        }
+
+        .goods_info>span {
+            font-size: 16px;
+            color: #000;
+            font-weight: 200;
+            line-height: 1.5;
+            letter-spacing: -.4px;
+        }
+
+        .goods_star {
+            width: 110px;
+            height: 26px;
+            margin: 0 0 0 80px;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .star>img {
+            width: 22px;
+            height: 22px;
+        }
+
+        .goods_info>button {
+            border: none;
+            background: none;
+            margin: 0 0 0 8px;
+        }
+
+        .goods_info>button>a {
+            color: #adadad;
+            font-size: 14px;
+        }
+
+        .goods_right {
+            width: 568px;
+            height: 770px;
+            margin: 8px 0 0 64px;
+        }
+
+        .goods_info_head {
+            width: 568px;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .goods_logo>span {
+            font-size: 18px;
+            color: #000;
+            display: block;
+            font-weight: bold;
+            line-height: 26px;
+            letter-spacing: -.4px;
+        }
+
+        .goods_logo>h3 {
+            font-size: 26px;
+            color: #000;
+            margin-top: 10px;
+            font-weight: 500px;
+            line-height: 1.31;
+            letter-spacing: -.6px;
+        }
+
+        .goods_info_action {
+            width: 72px;
+            height: 70px;
+            float: right;
+        }
+
+        .action1 {
+            width: 32px;
+            height: 32px;
+            border: none;
+            background: url("https://shop.pulmuone.co.kr/assets/pc/images/common/heart-line-32.svg");
+        }
+
+        .action2 {
+            width: 32px;
+            height: 32px;
+            border: none;
+            background: url("https://shop.pulmuone.co.kr/assets/pc/images/common/share-line-black.svg");
+        }
+
+        .goods_right_info {
+            width: 568px;
+            height: 86px;
+            margin: 4px 0 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .goods_right_info>span {
+            font-size: 18px;
+            color: #5c5c5c;
+            margin: 6px 0 0px;
+        }
+
+        .goods_info_price>span {
+            font-size: 20px;
+            color: #000;
+        }
+
+        .goods_info_price>span>em {
+            font-size: 32px;
+            color: #000;
+            margin: 0 2px 0 0px;
+            font-weight: 500;
+        }
+
+        .goods_storage {
+            width: 568px;
+            height: 81px;
+            margin: 30px 0 0px;
+            border-top: 1px solid #f5f5f5;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .goods_storage>dt {
+            width: 132px;
+            height: 39px;
+            font-size: 26px;
+            font-weight: bold;
+            line-height: 1.5;
+            letter-spacing: -.4px;
+        }
+
+        .goods_storage>dd {
+            height: 39px;
+            font-size: 26px;
+            line-height: 1.5;
+            letter-spacing: -.4px;
+        }
+
+        .goods_delivery {
+            width: 568px;
+            height: 66px;
+            border-top: 1px solid #f5f5f5;
+            display: flex;
+            align-items: center;
+        }
+
+        .goods_delivery>dt {
+            width: 132px;
+            height: 24px;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: -.4px;
+            font-weight: bold;
+        }
+
+        .goods_delivery>dd {
+            height: 24px;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: -.4px;
+        }
+
+        .details {
+            width: 568px;
+            height: 66px;
+            display: flex;
+            border-top: 1px solid #f5f5f5;
+            align-items: center;
+        }
+
+        .goods_details {
+            width: 568px;
+            height: 46px;
+            display: flex;
+            align-items: center;
+        }
+
+        .goods_details>dt {
+            width: 132px;
+            height: 24px;
+            font-size: 16px;
+            color: #000;
+            display: inline;
+            font-weight: bold;
+        }
+
+        .detalis_box {
+            width: 189px;
+            height: 24px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .detalis_box1 {
+            width: 84px;
+            height: 24px;
+            font-size: 16px;
+            color: #000;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+
+
+
+        .detalis_box2 {
+            width: 84px;
+            height: 24px;
+            font-size: 16px;
+            color: #000;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+        }
+
+
+
+        .mini_cart {
+            width: 568px;
+            height: 256px;
+            padding: 20px 0 0px;
+            border-top: 1px solid #ebebeb;
+        }
+
+        .cart_info {
+            width: 536px;
+            height: 31px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0 0px;
+        }
+
+        .cart_box {
+            width: 568px;
+            height: 94px;
+            background-color: #f7f7f7;
+            border-radius: 8px;
+            padding: 12px 16px;
+            box-sizing: border-box;
+        }
+
+        .cart_box>span {
+            font-size: 16px;
+            color: #000;
+        }
+
+        .cart_button {
+            width: 86px;
+            height: 31px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cart_button>button {
+            width: 31px;
+            height: 31px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 1px solid #ebebeb;
+        }
+
+        .cart_button>button>a>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .cart_button>span {
+            font-size: 16px;
+            color: #000;
+        }
+
+        .goods_price>em {
+            font-size: 22px;
+        }
+
+        .goods_summary {
+            width: 568px;
+            height: 48px;
+            margin: 20px 0 0px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+
+        .total {
+            width: 180px;
+            height: 41px;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .total>dt {
+            font-size: 16px;
+            color: #000;
+        }
+
+        .total_price {
+            font-size: 20px;
+            color: #ff752a;
+        }
+
+        .total_price>em {
+            font-size: 36px;
+        }
+
+        .cart_footer {
+            width: 568px;
+            height: 60px;
+            margin: 20px 0 0px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .cart1 {
+            width: 178px;
+            height: 60px;
+            background-color: #fff;
+            border-radius: 8px;
+            border: 1px solid #80c342;
+        }
+
+        .cart1>a {
+            text-decoration: none;
+        }
+
+        .cart1>a>img {
+            width: 28px;
+            height: 28px;
+            vertical-align: middle;
+        }
+
+        .cart1>a>span {
+            color: #80c342;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 28px;
+            vertical-align: middle;
+            letter-spacing: -.4px;
+        }
+
+        .cart2 {
+            width: 188px;
+            height: 60px;
+            background: #fff;
+            color: #80c342;
+            border: 1px solid #80c342;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 28px;
+        }
+
+        .cart2>a {
+            text-decoration: none;
+            color: #80c342;
+        }
+
+        .cart3 {
+            width: 186px;
+            height: 60px;
+            background-color: #80c342;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 28px;
+            border-radius: 8px;
+            border: 1px solid #80c342;
+        }
+
+        .cart3>a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+
+
+        #submenu {
+            width: 1168px;
+            height: 68px;
+            background-color: #fafafa;
+            border-top: 1px solid #adadad;
+            margin: 0 auto;
+        }
+
+        .submenu_inner {
+            width: 1168px;
+            height: 68px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .submenu1 {
+            width: 234px;
+            height: 68px;
+            display: flex;
+            background-color: #fff;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .submenu1>a {
+            text-decoration: none;
+        }
+
+        .menu_tab {
+            color: #000;
+            font-size: 18px;
+            font-weight: bold;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .menu_tab_count {
+            color: #858585;
+            font-size: 16px;
+            margin: 0 0 0 2px;
+        }
+
+
+
+
+        #contents {
+            width: 1200px;
+            height: 5230px;
+            margin: 0 auto;
+        }
+
+        .content_wrap {
+            width: 968px;
+            height: 4700px;
+            padding: 60px 0;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+
+        .wrap_logo {
+            width: 948px;
+            height: 80px;
+            margin: 0 auto;
+        }
+
+        .wrap_logo>span>img {
+            width: 150px;
+            height: 80px;
+        }
+
+        .wrap_img {
+            width: 948px;
+            height: 794px;
+            margin: 0 auto;
+        }
+
+        .wrap_img>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .detail_wrap0 {
+            width: 948px;
+            height: 261px;
+            margin: 40px auto 0px;
+        }
+
+        .subtitle {
+            font-size: 26px;
+            color: #1b1b1b;
+            display: flex;
+            justify-content: center;
+        }
+
+        .detail_title {
+            font-size: 42px;
+            margin: 5px 0 0px;
+            color: #1b1b1b;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .detail_title_point {
+            font-size: 40px;
+            margin: 4px 0 0px;
+            color: #1b1b1b;
+            font-weight: 700;
+        }
+
+        .detail_text {
+            font-size: 22px;
+            margin-top: 26px;
+            text-align: left;
+            line-height: 1.6;
+            color: #323131;
+            font-weight: 400;
+        }
+
+        .detail_wrap {
+            width: 948px;
+            height: 126px;
+            margin: 30px auto;
+        }
+
+        .info_wrap {
+            width: 948px;
+            height: 126px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .wrap_icon>img {
+            width: 48px;
+            height: 48px;
+        }
+
+        .wrap_title {
+            font-size: 22px;
+            color: #323131;
+            margin: 0 0 0 10px;
+            line-height: 30px;
+        }
+
+        .info_wrap>ul {
+            display: flex;
+            align-items: center;
+        }
+
+        .info_wrap>ul>li {
+            width: 237px;
+            height: 124px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .detail_wrap1 {
+            width: 948px;
+            height: 2003px;
+            margin: 0 auto;
+        }
+
+        .info_wrap1 {
+            width: 948px;
+            height: 794px;
+        }
+
+        .info_wrap1>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .wrap_text1 {
+            width: 948px;
+            height: 39px;
+            margin: 38px 0 0px;
+            font-size: 28px;
+            color: #323131;
+            text-align: left;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        .wrap_text2 {
+            font-size: 22px;
+            color: #323131;
+            text-align: left;
+            line-height: 1.5;
+            margin-top: 18px;
+            word-break: normal;
+            font-weight: 400;
+        }
+
+        .info_wrap2 {
+            width: 948px;
+            height: 794px;
+            margin-top: 60px;
+        }
+
+        .info_wrap2>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .wrap_text3 {
+            width: 948px;
+            height: 39px;
+            font-size: 28px;
+            color: #323131;
+            font-weight: 500;
+            text-align: left;
+            line-height: 1.4;
+            margin: 38px 0 0px;
+        }
+
+        .wrap_text4 {
+            width: 948px;
+            height: 99px;
+            font-size: 22px;
+            color: #323131;
+            text-align: left;
+            line-height: 1.5;
+            margin: 18px 0 0px;
+        }
+
+        .detail_wrap3 {
+            width: 948px;
+            height: 1083px;
+            margin: 0 auto;
+        }
+
+        .wrap3_title {
+            width: 948px;
+            height: 37px;
+            font-size: 32px;
+            color: #323131;
+            text-align: left;
+            font-weight: 500;
+            padding-left: 20px;
+            margin-top: 105px;
+        }
+
+        .wrap_text5 {
+            width: 948px;
+            height: 60px;
+            font-size: 22px;
+            color: #323131;
+            text-align: left;
+            line-height: 1.5;
+            margin: 18px 0 0px;
+        }
+
+        .wrap_text6 {
+            width: 948px;
+            height: 68px;
+            font-size: 22px;
+            color: #323131;
+            text-align: left;
+            line-height: 1.5;
+            margin: 18px 0 0px;
+        }
+
+        .wrap_text7 {
+            width: 948px;
+            height: 25px;
+            font-size: 22px;
+            color: #323131;
+            text-align: left;
+            line-height: 1.5;
+            margin: 25px 0 0px;
+        }
+
+        .detail_wrap4 {
+            width: 968px;
+            height: 500px;
+            margin: 0 auto;
+            padding: 60px 0px;
+        }
+
+        .wrap_img1 {
+            width: 948px;
+            height: 500px;
+            margin: 0 auto;
+        }
+
+        .wrap_im1>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .goods_recommended_contain {
+            width: 1168px;
+            height: 459px;
+            margin: 0 auto 24px;
+            padding: 60px 0 0px;
+            border-top: 1px solid #d6d6d6;
+            box-sizing: border-box;
+        }
+
+        .goods_recommended_contain>h3 {
+            width: 11698px;
+            height: 30px;
+            font-size: 24px;
+            color: #000;
+            font-weight: 500;
+            line-height: 1.25;
+            letter-spacing: -.4px;
+        }
+
+        .goods_recommended {
+            width: 1168px;
+            height: 341px;
+        }
+
+        .goods_recommended_inner {
+            width: 100%;
+            height: 341px;
+            margin: 26px auto 0;
+        }
+
+        .goods_wrap {
+            width: 1168px;
+            height: 341px;
+            display: flex;
+        }
+
+        .goods_wrap_inner1 {
+            width: 208px;
+            height: 341px;
+            margin-right: 32px;
+        }
+
+        .goods_wrap_inner1>a {
+            text-decoration: none;
+        }
+
+        .goods_wrap_inner2 {
+            width: 208px;
+            height: 341px;
+        }
+
+        .goods_wrap_inner2>a {
+            text-decoration: none;
+        }
+
+        .goods_thumbnail {
+            width: 208px;
+            height: 208px;
+            text-decoration: none;
+        }
+
+        .goods_thumbnail>a>img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+        }
+
+        .goods_brand_top {
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #000;
+            line-height: 1.44;
+            letter-spacing: -.4px;
+            display: block;
+        }
+
+        .goods_name {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #000;
+            letter-spacing: -.4px;
+            width: 208px;
+            height: 48px;
+        }
+
+        .goods_price_cost {
+            display: block;
+            margin-top: 4px;
+            color: #c2c2c2;
+            font-size: 14px;
+            line-height: 1.43;
+            letter-spacing: -.2px;
+            text-decoration: line-through;
+        }
+
+        .goods_price1 {
+            width: 208px;
+            height: 28px;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .goods_price2 {
+            font-size: 14px;
+            color: #000;
+            display: flex;
+            align-items: baseline;
+        }
+
+        .goods_price2>em {
+            font-size: 20px;
+            margin: 0 2px 0 0px;
+            color: #000;
+        }
+
+        .goods_price2>em.point {
+            color: #ff752a;
+            margin: 0 0 0 4px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+
+
+<body>
+
+
+    <header>
+        <figure>
+            <img src="https://shoppulmuone.cdn.ntruss.com/BOS/dp/2023/06/28/121C586DB31045F2AB2A.jpg" alt="">
+        </figure>
+        <div class="login_top">
+            <div class="login">
+                <div class="login_inner">
+                    <ul>
+                        <li><a href="#">로그인</a></li>
+                        <li><a href="#">|</a></li>
+                        <li><a href="#">회원가입</a></li>
+                        <li><a href="#">|</a></li>
+                        <li><a href="#">고객지원센터</a></li>
+                        <li><a href="#">|</a></li>
+                        <li><a href="#">배송안내</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="inner">
+                <div class="content_inner">
+                    <div class="top">
+                        <div class="logo">
+                            <a href="#"><img src="https://shop.pulmuone.co.kr/assets/pc/images/logo/pulmuone-shop.svg"
+                                    alt=""></a>
+                        </div>
+                        <section class="search_main">
+                            <div class="search_header">
+                                <div class="search_input">
+                                    <div class="text_inner">
+                                        <input type="text" placeholder="" maxlength="30">
+                                    </div>
+                                    <button class="search_input_btn">
+                                    </button>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="user_box">
+                            <a href="#"><img
+                                    src="	https://shop.pulmuone.co.kr/assets/pc/images/layout/mypage-line-48.svg"
+                                    alt=""></a>
+                            <a href="#"><img
+                                    src="https://shop.pulmuone.co.kr/assets/pc/images/layout/delivery-line-48.svg"
+                                    alt=""></a>
+                            <a href="#"><img src="https://shop.pulmuone.co.kr/assets/pc/images/layout/cart-line-48.svg"
+                                    alt=""></a>
+                        </div>
+                    </div>
+                    <div class="header_nav">
+                        <nav>
+                            <a href="#">
+                                <div class="navbutton">
+                                    <button></button>전체 카테고리
+                                </div>
+                            </a>
+                            <ul>
+                                <li><a href="#">베스트</a></li>
+                                <li><a href="#">당일배송</a></li>
+                                <li><a href="#">매장배송</a></li>
+                                <li><a href="#">지금세일</a></li>
+                                <li><a href="#">신상품</a></li>
+                                <li><a href="#">기획전/이벤트</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header_oder">
+                            <ul class="header_oder-wrap">
+                                <li class="header_oder_text">
+                                    녹즙, 내 맘대로 주문
+                                </li>
+                                <div class="header_oder_img">
+                                    <img src="https://shop.pulmuone.co.kr/assets/pc/images/layout/greenjuice-logo.png">
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+
+
+
+
+
+    <div id="sub">
+        <div class="goods_left">
+            <div class="goods_img">
+                <a href=""><img src="https://shoppulmuone.cdn.ntruss.com/BOS/il/2023/05/02/640_90E97E5168CD4A39BB5D.jpg"
+                        alt=""></a>
+            </div>
+            <div class="goods_img_bottom">
+                <div class="goods_box">
+                    <div class="img_inner1">
+                        <img src="https://shoppulmuone.cdn.ntruss.com/BOS/il/2023/05/02/75_90E97E5168CD4A39BB5D.jpg"
+                            alt="">
+                    </div>
+                    <div class="img_inner2">
+                        <img src="https://shoppulmuone.cdn.ntruss.com/BOS/il/2022/09/15/75_F951C92F650049F9B44F.jpg"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="goods_info">
+                <span>상품후기</span>
+                <div class="goods_star">
+                    <span class="star"><img
+                            src="https://cdn3.iconfinder.com/data/icons/font-awesome-solid/576/star-512.png"
+                            alt=""></span>
+                    <span class="star"><img
+                            src="https://cdn3.iconfinder.com/data/icons/font-awesome-solid/576/star-512.png"
+                            alt=""></span>
+                    <span class="star"><img
+                            src="https://cdn3.iconfinder.com/data/icons/font-awesome-solid/576/star-512.png"
+                            alt=""></span>
+                    <span class="star"><img
+                            src="https://cdn3.iconfinder.com/data/icons/font-awesome-solid/576/star-512.png"
+                            alt=""></span>
+                    <span class="star"><img src="https://cdn3.iconfinder.com/data/icons/feather-5/24/star-512.png"
+                            alt=""></span>
+                </div>
+                <button><a href="">501건 후기 더보기</a></button>
+            </div>
+        </div>
+        <div class="goods_right">
+            <div class="goods_info_head">
+                <div class="goods_logo">
+                    <span>풀무원</span>
+                    <h3>김치 생 수제비 2인 423g (423g)</h3>
+                </div>
+                <div class="goods_info_action">
+                    <button class="action1"></button>
+                    <button class="action2"></button>
+                </div>
+            </div>
+            <div class="goods_right_info">
+                <span>김치 생 수제비 2인 423g</span>
+                <div class="goods_info_price">
+                    <span>
+                        <em>7,600</em>
+                        원
+                    </span>
+                </div>
+            </div>
+            <dl class="goods_storage">
+                <dt>원산지</dt>
+                <dd>상세설명참조</dd>
+            </dl>
+            <dl class="goods_delivery">
+                <dt>보관방법</dt>
+                <dd>냉장보관</dd>
+            </dl>
+            <div class="details">
+                <dl class="goods_details">
+                    <dt>배송정보</dt>
+                    <dd class="detalis_box">
+                        <span class="detalis_box1">
+                            <img src="https://shop.pulmuone.co.kr/assets/pc/images/common/delivery-line-24.svg" alt="">
+                            <span>일반배송</span>
+                        </span>
+                        <span class="detalis_box2">
+                            <img src="https://shop.pulmuone.co.kr/assets/pc/images/common/dawn-line-24.svg" alt="">
+                            <span>새벽배송</span>
+                        </span>
+                    </dd>
+                </dl>
+            </div>
+            <section class="mini_cart">
+                <div class="cart_box">
+                    <span>김치 생 수제비 2인 423g (423g)</span>
+                    <div class="cart_info">
+                        <div class="cart_button">
+                            <button><a href="#"><img
+                                        src="https://cdn3.iconfinder.com/data/icons/feather-5/24/minus-512.png"
+                                        alt=""></a></button>
+                            <span>1</span>
+                            <button><a href="#"><img
+                                        src="https://cdn3.iconfinder.com/data/icons/feather-5/24/plus-512.png"
+                                        alt=""></a></button>
+                        </div>
+                        <span class="goods_price">
+                            <em>7,600</em>
+                        </span>
+                    </div>
+                </div>
+                <div class="goods_summary">
+                    <dl class="total">
+                        <dt>주문금액</dt>
+                        <dd class="total_price">
+                            <em>7,600</em>
+                            원
+                        </dd>
+                    </dl>
+                </div>
+                <div class="cart_footer">
+                    <button class="cart1">
+                        <a href="#"> <img
+                                src="https://shop.pulmuone.co.kr/assets/pc/images/common/icon-28-gift-full.svg" alt="">
+                            <span>선물하기</span></a>
+                    </button>
+                    <button class="cart2">
+                        <a href="#"> <span>장바구니</span></a>
+                    </button>
+                    <button class="cart3">
+                        <a href="#"> <span>바로구매</span></a>
+                    </button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div id="submenu">
+        <div class="submenu_inner">
+            <label class="submenu1">
+                <a href="#"><span class="menu_tab">상품정보</span></a>
+            </label>
+            <label class="submenu1">
+                <a href="#"><span class="menu_tab">구매정보</span></a>
+            </label>
+            <label class="submenu1">
+                <a href="#"><span class="menu_tab">상품후기
+                        <span class="menu_tab_count">501</span></span></a>
+            </label>
+            <label class="submenu1">
+                <a href="#"><span class="menu_tab">상품문의</span></a>
+            </label>
+            <label class="submenu1">
+                <a href="#"><span class="menu_tab">배송/환불</span></a>
+            </label>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div id="contents">
+        <section class="content_wrap">
+            <div class="wrap_logo">
+                <span><img src="https://www.pulmuone.co.kr/pulmuone/images/og_img.gif" alt=""></span>
+            </div>
+            <div class="wrap_img">
+                <img src="https://shoppulmuone.cdn.ntruss.com/newProduct21/33934_kimchi_sujebi/img_product_main.jpg"
+                    alt="">
+            </div>
+            <div class="detail_wrap0">
+                <span class="subtitle">얼큰칼칼 국물과 쫄깃한 생수제비</span>
+                <h2 class="detail_title">
+                    김치 생 수제비 2인
+                    <span class="detail_title_point">(423g)</span>
+                </h2>
+                <p class="detail_text">쫄깃하게 씹히는 맛이 매력적인 김치 생수제비예요. 수타식 공법으로 여러 번 치대 만든 생 수제비에 김치로 맛을 낸 얼큰 칼칼 육수를 더했답니다.
+                    잘 익은 숙성김치 건더기를 사용해 맛의 깊이가 남달라요. 건조 후레이크 대신 생생 김치 건더기를 사용해 씹는 맛도 살아 있답니다. 콧잔등에 땀이 송글 맺히는 김치 생 수제비 한
+                    그릇으로 마음까지 따끈하게 데워보세요. </p>
+            </div>
+            <div class="detail_wrap">
+                <div class="info_wrap">
+                    <ul>
+                        <li>
+                            <span class="wrap_icon"><img
+                                    src="https://shoppulmuone.cdn.ntruss.com/newProduct21/common/img/icon/icon_green_check.png"
+                                    alt=""></span>
+                            <span class="wrap_title">수타식<br>생수제비</span>
+                        </li>
+                        <li>
+                            <span class="wrap_icon"><img
+                                    src="https://shoppulmuone.cdn.ntruss.com/newProduct21/common/img/icon/icon_green_check.png"
+                                    alt=""></span>
+                            <span class="wrap_title">생생<br>김치 건더기</span>
+                        </li>
+                        <li>
+                            <span class="wrap_icon"><img
+                                    src="https://shoppulmuone.cdn.ntruss.com/newProduct21/common/img/icon/icon_green_check.png"
+                                    alt=""></span>
+                            <span class="wrap_title">얼큰하고<br>칼칼한 맛</span>
+                        </li>
+                        <li>
+                            <span class="wrap_icon"><img
+                                    src="https://shoppulmuone.cdn.ntruss.com/newProduct21/common/img/icon/icon_green_check.png"
+                                    alt=""></span>
+                            <span class="wrap_title">숙성 김치의<br>깊은 맛</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="detail_wrap1">
+                <div class="info_wrap1"><img
+                        src="https://shoppulmuone.cdn.ntruss.com/newProduct21/33934_kimchi_sujebi/img_product_sub_01.jpg"
+                        alt=""></div>
+                <p class="wrap_text1">수타식으로 쫄깃하게</p>
+                <p class="wrap_text2">수제비 맛의 핵심은 쫄깃함이죠. 집에서 손으로 직접 만든 듯 사방으로 치대 만든 생수제비를 사용해 남다른 쫄깃함을 즐길 수 있을거예요.</p>
+                <div class="detail_wrap2">
+                    <div class="info_wrap2"><img
+                            src="https://shoppulmuone.cdn.ntruss.com/newProduct21/33934_kimchi_sujebi/img_product_sub_02.jpg"
+                            alt=""></div>
+                    <p class="wrap_text3">이렇게 조리하세요</p>
+                    <p class="wrap_text4">1 물 500cc에 소스와 생생김치 건더기를 넣고 끓여줍니다.<br>
+                        2 끓는 물에 밀가루를 털어낸 수제비 면을 넣고 중불에 7분 30초간 끓여주세요.<br>
+                        3 그릇에 수제비를 담은 뒤 참깨&김 후레이크를 넣고 잘 섞어 드세요.<br></p>
+                </div>
+            </div>
+            <div class="detail_wrap3">
+                <h3 class="wrap3_title">
+                    유용한 정보
+                </h3>
+                <div class="info_wrap3"><img
+                        src="https://shoppulmuone.cdn.ntruss.com/newProduct21/33934_kimchi_sujebi/img_product_sub_03.jpg"
+                        alt=""></div>
+                <p class="wrap_text5">423g(생수제비면 140gx2ea, 수제비소스 20gx2ea, 생생김치건더기 50gx2ea, 참깨&김 후레이크 1.6gx2ea)</p>
+                <p class="wrap_text6">
+                    <strong>보관법</strong><br>
+                    냉장실에 보관해주세요.
+                </p>
+                <p class="wrap_text7">※ 본 기술서의 관능 표현과 사용, 보관 등 추천의 내용은 사용자나 적용 환경에 따라 달라질 수 있습니다.</p>
+            </div>
+            <div class="detail_wrap4">
+                <div class="wrap_img1">
+                    <img src="https://s.pulmuone.app/BOS/il/2022/09/15/FE201F1EF40844209B1F.jpg" alt="">
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="goods_recommended_contain">
+        <h3>추천상품</h3>
+        <div class="goods_recommended">
+            <div class="goods_recommended_inner">
+                <div class="goods_wrap">
+                    <div class="goods_wrap_inner1">
+                        <div class="goods_thumbnail">
+                            <a href="#"><img
+                                    src="https://shoppulmuone.cdn.ntruss.com/BOS/il/2021/05/11/216_60768AA315E547398E6A.jpg"
+                                    alt="">
+                        </div>
+                        <span class="goods_brand_top">풀무원</span>
+                        <span class="goods_name"> [기획]동치미냉면2인+함흥비빔냉면2인 (1306g) </span>
+                        <span class="goods_price_cost">9,800</span>
+                        <div class="goods_price1">
+                            <span class="goods_price2">
+                                <em>8,400</em>
+                                원
+                                <em class="point">13%</em>
+                            </span>
+                        </div></a>
+                    </div>
+                    <div class="goods_wrap_inner1">
+                        <a href="#"></a>
+                        <div class="goods_thumbnail">
+                            <a href="#"><img
+                                    src="https://shoppulmuone.cdn.ntruss.com/BOS/il/2022/09/19/216_4A2824CE19A44D53A80B.jpg"
+                                    alt="">
+                        </div>
+                        <span class="goods_brand_top">풀무원</span>
+                        <span class="goods_name"> 리얼해초 미역면 1인분 (150g)</span>
+                        <span class="goods_price_cost"> </span>
+                        <div class="goods_price1">
+                            <span class="goods_price2">
+                                <em>2,480</em>
+                                원
+                                <em class="point"></em>
+                            </span>
+                        </div></a>
+                    </div>
+                    <div class="goods_wrap_inner1">
+                        <a href="#">
+                            <div class="goods_thumbnail">
+                                <img src="https://shoppulmuone.cdn.ntruss.com/BOS/il/2022/08/02/216_0FD93B755F6D44CBB5B4.jpg"
+                                    alt="">
+                            </div>
+                            <span class="goods_brand_top">풀무원</span>
+                            <span class="goods_name"> [1+1]비빔메밀냉면(2인)+[증정]물메밀냉면(2인)</span>
+                            <span class="goods_price_cost"> 7,600 </span>
+                            <div class="goods_price1">
+                                <span class="goods_price2">
+                                    <em>7,200</em>
+                                    원
+                                    <em class="point">5%</em>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="goods_wrap_inner1">
+                        <a href="#">
+                            <div class="goods_thumbnail">
+                                <img src="https://shoppulmuone.cdn.ntruss.com/BOS/il/2023/04/26/216_4150F0AF82EB44158300.jpg"
+                                    alt="">
+                            </div>
+                            <span class="goods_brand_top">풀무원</span>
+                            <span class="goods_name"> [식물성지구식단] Silky두유면 비빔국수 2인 (423g) </span>
+                            <span class="goods_price_cost">7,980</span>
+                            <div class="goods_price1">
+                                <span class="goods_price2">
+                                    <em>6,980</em>
+                                    원
+                                    <em class="point">12%</em>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="goods_wrap_inner2">
+                        <a href="#">
+                            <div class="goods_thumbnail">
+                                <img src="https://shoppulmuone.cdn.ntruss.com/BOS/il/2023/06/16/216_751369294A604AB792FA.jpg"
+                                    alt="">
+                            </div>
+                            <span class="goods_brand_top">풀무원</span>
+                            <span class="goods_name"> 메밀냉면사리 130g (130g) </span>
+                            <span class="goods_price_cost"></span>
+                            <div class="goods_price1">
+                                <span class="goods_price2">
+                                    <em>2,500</em>
+                                    원
+                                    <em class="point"></em>
+                                </span>
+                            </div>
+                    </div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+    <footer>
+        <div class="footer_inner">
+            <section class="footer_top">
+                <div class="link">
+                    <a class="link_f">회사소개</a>
+                    <a class="link_f">|</a>
+                    <a class="link_f">브랜드 스토리</a>
+                    <a class="link_f">|</a>
+                    <a class="link_top">개인정보처리방침</a>
+                    <a class="link_f">|</a>
+                    <a class="link_f">이용약관</a>
+                    <a class="link_f">|</a>
+                    <a class="link_f">임직원 인증</a>
+                    <a class="link_f">|</a>
+                    <a class="link_f">상품입점상담</a>
+                </div>
+            </section>
+            <section class="footer_info">
+                <div class="info_logo">
+                    <div class="footer_logo"><img
+                            src="https://shop.pulmuone.co.kr/assets/pc/images/layout/footer-pulmuone.svg" alt="">
+                    </div>
+                    <div class="info_logo1">
+                        <img src="https://shop.pulmuone.co.kr/assets/pc/images/layout/footer-escrow-1.png" alt="">
+                        <img src="https://shop.pulmuone.co.kr/assets/pc/images/layout/footer-escrow-2.jpg" alt="">
+                        <img src="https://shop.pulmuone.co.kr/assets/pc/images/layout/footer-escrow-3.jpg" alt="">
+                    </div>
+                </div>
+                <div class="info_store">
+                    <span class="store_name">(주)풀 무 원</span>
+                    <span class="name_info">대표자 : 이효율|주소 : 서울 강남구 광평로 280 (수서동), (주) 풀무원<br>
+                        사업자등록번호 : 315-81-01744 사업자 정보확인|통신판매업신고 : 제2019-서울강남-02379호|<br>
+                        건강기능식품 신고 : 제2019-016813호|호스팅 제공자 : (주)풀무원</span>
+                </div>
+                <div class="info_cs">
+                    <sapn class="phone">고객기쁨센터</sapn>
+                    <strong class="storng">080-022-0086</strong>
+                    <span class="email">이메일 : pmocs_02@pulmuone.com</span>
+                    <span class="time">평일 : 09:00 - 18:00|점심시간 : 12:00 - 13:00</span>
+                    <div class="cs">
+                        <a class="cs1" href="#">고객기쁨센터 바로가기</a>
+                        <a class="cs2">></a>
+                    </div>
+                </div>
+                <div class="info_bottom">
+                    <p>㈜풀무원은 통신판매중개자이며 통신판매의 당사자가 아닙니다. ㈜풀무원은 상품, 거래정보 및 거래에 대하여 책임을 지지 않습니다.</p>
+                    <span>Copyright ⓒ Pulmuone co.,Ltd All Rights Reserved.</span>
+                </div>
+            </section>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
